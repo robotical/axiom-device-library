@@ -3,7 +3,6 @@
   "name": "AHT20",
   "title": "AHT20 temperature and humidity sensor",
   "manufacturer": "Asair",
-  "targetPlatforms": ["axiom"],
   "profile": "profile.json",
   "documentation": "README.md",
   "source": {

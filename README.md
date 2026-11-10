@@ -16,5 +16,7 @@ information and available test reports.
 
 Compatibility applies to the combinations recorded in those reports.
 
-Contribution and review instructions are being prepared.
-Support beyond Axiom is being investigated.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution instructions.
+
+Repository setup is ongoing. Contribution licensing and review ownership
+will be documented before the external pilot.

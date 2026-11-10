@@ -1,0 +1,33 @@
+name: Device support request
+description: Suggest a sensor or actuator to support.
+title: "[Device request] "
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: Manufacturer and exact model or breakout board.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Product information
+      description: Add product, datasheet or existing driver links if available.
+  - type: textarea
+    id: project
+    attributes:
+      label: Your project
+      description: What do you want to read or control with Axiom?
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Do you have this device available for testing?
+      options:
+        - "Yes"
+        - "No"
+        - "Not yet"
+    validations:
+      required: true

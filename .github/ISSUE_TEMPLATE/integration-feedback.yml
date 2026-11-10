@@ -1,0 +1,49 @@
+name: Integration feedback
+description: Report success, a problem, or a documentation correction.
+title: "[Feedback] "
+body:
+  - type: input
+    id: integration
+    attributes:
+      label: Integration
+      description: Device name or link to its folder.
+      placeholder: AHT20
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Result
+      options:
+        - Worked
+        - Partly worked
+        - Did not work
+        - Documentation feedback
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Profile revision
+      description: Commit, tag, or file link, if known.
+  - type: textarea
+    id: setup
+    attributes:
+      label: Your setup
+      description: >-
+        Include Axiom model, firmware, sensor board, wiring, browser and OS where relevant.
+        For documentation feedback, enter not applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Steps and results
+      description: What did you try, what did you expect, and what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add readings, logs, photographs or links if available.

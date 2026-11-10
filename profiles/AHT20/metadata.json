@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "name": "AHT20",
+  "title": "AHT20 temperature and humidity sensor",
+  "manufacturer": "Asair",
+  "targetPlatforms": ["axiom"],
+  "profile": "profile.json",
+  "documentation": "README.md",
+  "source": {
+    "repository": "https://github.com/Robotical/axiom-web-updater",
+    "revision": "a5ff7051ff026cdb5190c5a78ed773cc8f9f491d",
+    "path": "src/catalogue/profiles/AHT20.json"
+  },
+  "reviewStatus": "draft",
+  "testReports": []
+}

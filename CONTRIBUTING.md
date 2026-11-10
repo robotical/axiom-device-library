@@ -75,3 +75,26 @@ compatibility.
 
 GitHub runs the same check on pull requests. Explain any remaining
 testing limitations in your pull request.
+
+## Contribution licensing
+
+New contributions are submitted under the repository's ISC licence.
+Contributors retain copyright in their contributions.
+
+Only submit material you have the right to contribute under these terms.
+Identify the source and licence of adapted material, and preserve
+applicable copyright and licence notices.
+
+## Maintainers and reviews
+
+Initial maintainers:
+
+- Nikos: @NikTheGeek1
+- Sandy: @alexanderEnoch
+
+Pull requests require one approving review from a code owner.
+The pull request author cannot provide their own required approval.
+
+Review considers correctness, documentation, attribution and the scope
+of available test evidence. Approval does not establish compatibility
+beyond the combinations actually tested.

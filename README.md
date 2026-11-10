@@ -18,5 +18,7 @@ Compatibility applies to the combinations recorded in those reports.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution instructions.
 
-Repository setup is ongoing. Contribution licensing and review ownership
-will be documented before the external pilot.
+The repository uses the [ISC licence](LICENSE). See
+[CONTRIBUTING.md](CONTRIBUTING.md) for contribution terms and maintainers.
+
+Repository setup is ongoing. 

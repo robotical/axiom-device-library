@@ -62,3 +62,16 @@ Compatibility claims must refer to the combinations actually tested.
 
 Adding a profile here does not automatically publish it in the
 Device Library website or install it on an Axiom.
+
+## Validate your changes
+
+Run the repository checks with Python 3.13:
+
+    python3 scripts/validate.py
+
+These checks validate integration files and references. They do not
+validate the complete firmware descriptor grammar or prove hardware
+compatibility.
+
+GitHub runs the same check on pull requests. Explain any remaining
+testing limitations in your pull request.

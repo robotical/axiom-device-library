@@ -66,8 +66,8 @@ letter or digit. Keep metadata.name and profile.deviceType equal to that folder 
 There is no separate index to maintain. Use the existing metadata schema; do not add a
 targetPlatforms field. This is the Axiom library.
 
-Once the coordinated service/web rollout is deployed, merging an approved PR makes the
-profile available after the service refreshes. Open PRs stay in the Community feed.
+Merging an approved PR makes the profile available after the service refreshes. Reload an
+already-open Catalogue page to fetch the newer snapshot. Open PRs stay in the Community feed.
 The service never installs anything on Axiom: users explicitly add a profile to their draft,
 review it, write the library and restart. A merge or an Installable label is not hardware
 verification. Restricted profiles remain documented even when they cannot be added.

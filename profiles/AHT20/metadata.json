@@ -11,5 +11,5 @@
     "path": "src/catalogue/profiles/AHT20.json"
   },
   "reviewStatus": "draft",
-  "testReports": []
+  "testReports": ["test-results/2026-11-11-nikos.md"]
 }

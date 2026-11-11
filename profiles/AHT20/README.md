@@ -57,7 +57,11 @@ this installation adds support or customises an existing type.
 
 ## Test evidence
 
-No new hardware test report has been recorded in this repository.
+[AHT20 test report, 2026-11-11](test-results/2026-11-11-nikos.md):
+installation and the active custom override were verified on Axiom018,
+firmware version 1. Temperature readings were approximately 19°C.
+Humidity remained saturated at 100% with both the built-in and custom
+definitions. Overall result: partial; cause unresolved.
 
 Historical AHT20 tests exist in axiom-web-updater's Device Library
 documentation. They used earlier firmware combinations and do not

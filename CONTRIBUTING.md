@@ -60,8 +60,17 @@ additional evidence.
 Acceptance of a change does not establish hardware compatibility.
 Compatibility claims must refer to the combinations actually tested.
 
-Adding a profile here does not automatically publish it in the
-Device Library website or install it on an Axiom.
+The Catalogue connection reads profiles/<name>/metadata.json and profile.json from main.
+Use a folder name of 1–80 letters, digits, dots, underscores or hyphens, beginning with a
+letter or digit. Keep metadata.name and profile.deviceType equal to that folder name.
+There is no separate index to maintain. Use the existing metadata schema; do not add a
+targetPlatforms field. This is the Axiom library.
+
+Once the coordinated service/web rollout is deployed, merging an approved PR makes the
+profile available after the service refreshes. Open PRs stay in the Community feed.
+The service never installs anything on Axiom: users explicitly add a profile to their draft,
+review it, write the library and restart. A merge or an Installable label is not hardware
+verification. Restricted profiles remain documented even when they cannot be added.
 
 ## Validate your changes
 

@@ -3,6 +3,7 @@
 
 import json
 from pathlib import Path
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +35,7 @@ def load_json(path):
 
 
 def validate_profile(folder):
+    require(re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}", folder.name), "Invalid profile folder name")
     for name in ("profile.json", "metadata.json", "README.md", "test-results/TEMPLATE.md"):
         path = folder / name
         require(path.is_file(), f"Missing {name}")

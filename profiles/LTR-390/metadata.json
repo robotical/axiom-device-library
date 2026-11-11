@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "name": "LTR-390",
+  "title": "Light Sensor (UV and visible)",
+  "manufacturer": "Lite On",
+  "profile": "profile.json",
+  "documentation": "README.md",
+  "source": {
+    "repository": "https://github.com/Robotical/axiom-web-updater",
+    "revision": "c32165dff988ba8f9281a03b0c94ad2b7633e79b",
+    "path": "src/catalogue/profiles/LTR-390.json",
+    "baseHash": "303a23aaa1ccbde404637ab67ae3bc6415a4b5e1b4dbd97aaf61584244654f07"
+  },
+  "reviewStatus": "draft",
+  "testReports": []
+}

@@ -1,0 +1,82 @@
+{
+  "_notes": "Sensirion STCC4 miniature CO2 sensor (paired with SHT41 for RH/T compensation). I2C addr 0x64. Detection is empty (unique address) - product-ID (get_product_id 0x365B -> 0x0901018A) cannot be used because the firmware detection path issues a single write+read transaction with no inter-command delay and the STCC4 NACKs a read issued immediately after a command. Init: start_continuous_measurement (0x218B). Poll: read_measurement (0xEC05) write then 1ms delay then read 12 bytes = 4 words CO2/temp/humidity/status, each 2 data bytes + CRC byte; CRC at offsets 2,5,8,11 skipped via 'at'. CO2 raw = ppm directly; temperature = -45 + 175*s/65535; humidity = -6 + 125*s/65535 (same as SHT4x). Verified working: stable continuous readings ~390ppm / ~26C / ~62%RH. IMPORTANT: because 0x64 is inside the RSAO ident-probe range (0x10..0x6f), the RSAO delegated-identification hook must NOT probe this address - its framed 0x99 vendor command is interpreted by the STCC4 as commands and stops the sensor measuring (product-ID stays readable but read_measurement/measurement-start commands then NACK). This is handled in RaftI2C DeviceIdentMgr::identifyDevice, which now only runs the delegated ident hook for addresses that have no standard device-type record; the STCC4 has one so it is never probed.",
+  "addresses": "0x64",
+  "deviceType": "STCC4",
+  "detectionValues": "",
+  "initValues": "0x218b=",
+  "pollInfo": {
+    "c": "0xec05=p1&=r12",
+    "i": 1000,
+    "s": 1
+  },
+  "scanPriority": "high",
+  "devInfoJson": {
+    "name": "CO2 Sensor",
+    "desc": "CO2, Temp & Humidity",
+    "manu": "Sensirion",
+    "type": "STCC4",
+    "clas": [
+      "CO2",
+      "TEMP",
+      "RH"
+    ],
+    "resp": {
+      "b": 12,
+      "a": [
+        {
+          "n": "CO2",
+          "at": 0,
+          "t": ">H",
+          "u": "ppm",
+          "r": [
+            0,
+            40000
+          ],
+          "f": "d",
+          "o": "uint16"
+        },
+        {
+          "n": "temperature",
+          "at": 3,
+          "t": ">H",
+          "u": "&deg;C",
+          "r": [
+            -45,
+            130
+          ],
+          "d": 374.48571428571427,
+          "a": -45,
+          "f": ".2f",
+          "o": "float"
+        },
+        {
+          "n": "humidity",
+          "at": 6,
+          "t": ">H",
+          "u": "%",
+          "r": [
+            0,
+            100
+          ],
+          "d": 524.28,
+          "a": -6,
+          "f": ".1f",
+          "o": "float"
+        },
+        {
+          "n": "status",
+          "at": 9,
+          "t": ">H",
+          "u": "",
+          "r": [
+            0,
+            65535
+          ],
+          "f": "04x",
+          "o": "uint16",
+          "vs": false
+        }
+      ]
+    }
+  }
+}

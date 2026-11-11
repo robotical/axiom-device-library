@@ -24,21 +24,15 @@ not been established by this migration; follow the board manufacturer's document
 Use Axiom firmware with Device Library support and a desktop browser supporting Web Serial.
 Record exact firmware, board, browser and OS versions in the test report.
 
-## Try the integration
+## Reference profile only on current firmware
 
-1. Connect Axiom and export any existing custom library as a backup.
-2. In Install, use Reset draft from Axiom to retain existing custom entries.
-3. Find `AS5600` in Catalogue and choose Add to draft when it is eligible. Alternatively,
-   import [profile.json](profile.json) through Advanced JSON. Read all restriction messages.
-4. Review the draft and any same-name replacement. Writing replaces the complete custom file.
-5. Write, restart, reconnect and refresh; inspect the boot result and rejected entries.
-6. In Test & tune, scan and record identity checks, startup and subsequent readings.
-7. Check a known stimulus or reference where applicable, then restart and check again.
-8. Restore your backup if needed. Save successful, partial or failed observations using
-   [the test-report template](test-results/TEMPLATE.md) and link the report from metadata.json.
+This profile is retained to document the existing seed library. It cannot currently be added
+under the Catalogue policy for the reason above. Do not use JSON import to bypass that restriction.
 
-A built-in definition with the same name can remain a fallback. File acceptance does not
-prove the custom definition identified the device or produced correct readings.
+To help improve support, report the exact board, firmware, desired connection and any test
+observations. A maintainer can then investigate the restriction and the required firmware or
+profile changes. [The test-report template](test-results/TEMPLATE.md) is available for those
+coordinated tests; this migration has not performed them.
 
 ## Feedback and attribution
 

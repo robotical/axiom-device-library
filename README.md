@@ -57,8 +57,9 @@ Open PRs appear in Community and are not installed or published as Catalogue cha
 After a reviewed PR merges, a signed webhook queues refresh; periodic reconciliation covers
 missed events. GitHub or validation failures retain the last good snapshot.
 
-Rollout of this connection is coordinated with the private service and web updater; until
-those changes deploy, the existing website still uses its previous static catalogue.
+The connection is live in [Axiom's Catalogue](https://updates.robotical.io/axiom/web-updater/library.html?tab=catalogue).
+Reload an open page to load newer merged content. Profile installation is always an explicit
+user action; a repository merge never writes to connected hardware.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for feedback, contribution and review instructions.
 The repository uses the [ISC licence](LICENSE). Contributors retain their copyright.

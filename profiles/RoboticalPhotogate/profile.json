@@ -1,0 +1,42 @@
+{
+  "deviceType": "RoboticalPhotogate",
+  "hwTypeId": "rsao:0x0125",
+  "detectionValues": "=p250&0x00=0x0125",
+  "initValues": "=p250&0x6004ff9c=p250",
+  "pollInfo": {
+    "c": "=r4",
+    "i": 100,
+    "s": 1
+  },
+  "devInfoJson": {
+    "name": "Photogate",
+    "desc": "Two raw infrared receiver ADC readings",
+    "manu": "Robotical",
+    "type": "RoboticalPhotogate",
+    "resp": {
+      "b": 4,
+      "a": [
+        {
+          "n": "gate1Raw",
+          "at": 0,
+          "t": ">H",
+          "u": "counts",
+          "r": [
+            0,
+            4095
+          ]
+        },
+        {
+          "n": "gate2Raw",
+          "at": 2,
+          "t": ">H",
+          "u": "counts",
+          "r": [
+            0,
+            4095
+          ]
+        }
+      ]
+    }
+  }
+}

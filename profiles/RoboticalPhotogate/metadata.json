@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "name": "RoboticalPhotogate",
+  "title": "Photogate",
+  "manufacturer": "Robotical",
+  "profile": "profile.json",
+  "documentation": "README.md",
+  "source": {
+    "contributedWith": "Axiom Device Library"
+  },
+  "reviewStatus": "draft",
+  "testReports": []
+}
